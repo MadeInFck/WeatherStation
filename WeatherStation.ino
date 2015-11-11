@@ -19,6 +19,7 @@ long debounce=200;
 
 void wakeUpNow()        // here the interrupt is handled after wakeup
 {
+  digitalWrite(A3,HIGH);
   Serial.println("Reveil en cours!");
   delay(1000);
 }
@@ -29,6 +30,8 @@ void setup() {
   digitalWrite(A1, HIGH);
   pinMode(A2,OUTPUT);
   digitalWrite(A2,LOW);
+  pinMode(A3,OUTPUT);
+  digitalWrite(A3,HIGH);
   byte numDigits = 4;
   byte digitPins[] = {13, 12, 11, 10};
   byte segmentPins[] = {9, 8, 7, 6, 5, 4, A0, 0};
@@ -46,6 +49,7 @@ void setup() {
 void sleepNow()         // here we put the arduino to sleep
 {
     Serial.println("Mise en sommeil");
+    digitalWrite(A3,LOW);
     delay(1000);
     /* Now is the time to set the sleep mode. In the Atmega8 datasheet
      * http://www.atmel.com/dyn/resources/prod_documents/doc2486.pdf on page 35
@@ -93,7 +97,6 @@ void sleepNow()         // here we put the arduino to sleep
 
     attachInterrupt(0,wakeUpNow, LOW); // use interrupt 0 (pin 2) and run function
                                        // wakeUpNow when pin 2 gets LOW 
-    
     sleep_mode();            // here the device is actually put to sleep!!
                              // THE PROGRAM CONTINUES FROM HERE AFTER WAKING UP
 
