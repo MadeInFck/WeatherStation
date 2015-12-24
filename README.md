@@ -17,5 +17,5 @@ Soldered on PCB. Everything's sweet.
 check link : http://www.madeinfck.com/?p=81
 Added a switch regarding 9V battery consumption or when leaving on vacation.
 
-To come:
--packaging!!!
+15/12/24:
+packaging done. Ready to offer for Xmas! Check pictures.
