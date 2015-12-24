@@ -18,4 +18,4 @@ check link : http://www.madeinfck.com/?p=81
 Added a switch regarding 9V battery consumption or when leaving on vacation.
 
 15/12/24:
-packaging done. Ready to offer for Xmas! Check pictures.
+packaging done. Ready to offer for Xmas! Check pictures here:http://www.madeinfck.com/?p=103
